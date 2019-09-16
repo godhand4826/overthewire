@@ -1,27 +1,27 @@
 Over The Wire
 http://overthewire.org/wargames/bandit/bandit0.html
 
-- level -1
+- level 0 
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 bandit0
 
-- level 0
+- level 0 -> 1
 ls
 cat readme
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
-- level 1 
+- level 1 -> 2
 ls
 cat ./-
 
-- level 2
+- level 2 -> 3
 ssh bandit2@bandit.labs.overthewire.org -p 2220
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 ls
 cat ./spaces\ in\ this\ filename
 
-- level 3
+- level 3 -> 4
 ssh bandit3@bandit.labs.overthewire.org -p 2220
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 ls
@@ -30,7 +30,7 @@ ls
 ls -al
 cat ./.hidden
 
-- level 4
+- level 4 -> 5
 ssh bandit4@bandit.labs.overthewire.org -p 2220
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ls
@@ -41,7 +41,7 @@ cat ./-file01
 cat ./-file07
 or for f in -file0* ; do echo "$f" ; strings -- "$f" ; echo "" ; done
 
-- level 5
+- level 5 -> 6
 ssh bandit5@bandit.labs.overthewire.org -p 2220
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ls
@@ -49,13 +49,13 @@ cd inhere
 find . -size 1033c
 cat ./maybehere07/.file2
 
-- level 6
+- level 6 -> 7
 ssh bandit6@bandit.labs.overthewire.org -p 2220
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 find / -size 33c -user bandit7 -group bandit6 2>&1 | grep -v find
 cat /var/lib/dpkg/info/bandit7.password
 
-- level 7
+- level 7 -> 8
 ssh bandit7@bandit.labs.overthewire.org -p 2220
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 ls
@@ -64,27 +64,27 @@ vim data.txt
 or grep millionth data.txt
 or cat data.txt | grep millionth
 
-- level 8
+- level 8 -> 9
 ssh bandit8@bandit.labs.overthewire.org -p 2220
 cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 cat data.txt | sort | uniq -u
 
-- level 9
+- level 9 -> 10
 ssh bandit9@bandit.labs.overthewire.org -p 2220
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 strings data.txt | grep ==
 
-- level 10
+- level 10 -> 11
 ssh bandit10@bandit.labs.overthewire.org -p 2220
 truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 base64 data.txt -d
 
-- level 11
+- level 11 -> 12
 ssh bandit11@bandit.labs.overthewire.org -p 2220
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
-- level 12
+- level 12 -> 13
 ssh bandit12@bandit.labs.overthewire.org -p 2220
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 cat data.txt | xxd -r > out
@@ -115,23 +115,23 @@ gzip -d data8.bin.gz
 file data8.bin
 cat data8.bin
 
-- level 13
+- level 13 -> 14
 ssh bandit13@bandit.labs.overthewire.org -p 2220
 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
-- level 14
+- level 14 -> 15
 ssh bandit14@localhost -i sshkey.private
 cat /etc/bandit_pass/bandit14
 nc -v localhost 30000
 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 
-- level 15
+- level 15 -> 16
 ssh bandit15@bandit.labs.overthewire.org -p 2220
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 openssl s_client -quiet -connect localhost:30001 
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 
-- level 16 
+- level 16 -> 17
 ssh bandit16@bandit.labs.overthewire.org -p 2220
 cluFn7wTiGryunymYOu4RcffSxQluehd
 nc -vz localhost 31000-32000 2>&1 | grep succeeded
@@ -140,8 +140,8 @@ openssl s_client -quiet -connect localhost:31046
 openssl s_client -quiet -connect localhost:31790
 cluFn7wTiGryunymYOu4RcffSxQluehd
 
-- level 17
-save this key in a file(key17)
+- level 17 -> 18
+save this key in a file(bandit17.sshkey)
 -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
 imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
@@ -170,25 +170,25 @@ dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
 vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 -----END RSA PRIVATE KEY-----
 
-ssh bandit17@bandit.labs.overthewire.org -p 2220 -i key17
+ssh bandit17@bandit.labs.overthewire.org -p 2220 -i bandit17.sshkey
 diff passwords.old passwords.new
 
-- level 18
+- level 18 -> 19
 ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"
 kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
-- level 19
+- level 19 -> 20
 ssh bandit19@bandit.labs.overthewire.org -p 2220
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 ./bandit20-do cat /etc/bandit_pass/bandit20
 
-- level 20
+- level 20 -> 21
 ssh bandit20@bandit.labs.overthewire.org -p 2220 
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 nc -l 12332 < /etc/bandit_pass/bandit20 &
 ./suconnect 12332
 
-- level 21
+- level 21 -> 22
 ssh bandit21@bandit.labs.overthewire.org -p 2220 
 gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 cd /etc/cron.d
@@ -198,7 +198,7 @@ ls cron*
 cat cronjob_bandit22.sh
 cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 
-- level 22
+- level 22 -> 23
 ssh bandit22@bandit.labs.overthewire.org -p 2220 
 Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 cd /etc/cron.d
@@ -209,7 +209,7 @@ cat cronjob_bandit23.sh
 echo I am user bandit23 | md5sum | cut -d ' ' -f 1
 cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 
-- level 23
+- level 23 -> 24
 ssh bandit23@bandit.labs.overthewire.org -p 2220 
 jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 cd /etc/cron.d
@@ -233,12 +233,12 @@ cp ./sendPass.sh /var/spool/bandit24/
 wait a minute ...
 cat pass
 
-- level 24
+- level 24 -> 25
 ssh bandit24@bandit.labs.overthewire.org -p 2220 
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 cd /tmp/
-mkdir yoo
-cd yoo
+mkdir foo
+cd foo
 
 create a script(brute.sh)
 #!/bin/bash
@@ -260,40 +260,12 @@ wait for a long time ...
 cat out | grep -v ^Wrong | grep -v ^I | grep -v ^Exit | grep -v ^testing
 cat out | grep -n Correct -A2 -B2
 
-- level 25
+- level 25 -> 26
 ssh bandit25@bandit.labs.overthewire.org -p 2220 
 uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 
-save this key in a file(key26)
------BEGIN RSA PRIVATE KEY-----
-MIIEpQIBAAKCAQEApis2AuoooEqeYWamtwX2k5z9uU1Afl2F8VyXQqbv/LTrIwdW
-pTfaeRHXzr0Y0a5Oe3GB/+W2+PReif+bPZlzTY1XFwpk+DiHk1kmL0moEW8HJuT9
-/5XbnpjSzn0eEAfFax2OcopjrzVqdBJQerkj0puv3UXY07AskgkyD5XepwGAlJOG
-xZsMq1oZqQ0W29aBtfykuGie2bxroRjuAPrYM4o3MMmtlNE5fC4G9Ihq0eq73MDi
-1ze6d2jIGce873qxn308BA2qhRPJNEbnPev5gI+5tU+UxebW8KLbk0EhoXB953Ix
-3lgOIrT9Y6skRjsMSFmC6WN/O7ovu8QzGqxdywIDAQABAoIBAAaXoETtVT9GtpHW
-qLaKHgYtLEO1tOFOhInWyolyZgL4inuRRva3CIvVEWK6TcnDyIlNL4MfcerehwGi
-il4fQFvLR7E6UFcopvhJiSJHIcvPQ9FfNFR3dYcNOQ/IFvE73bEqMwSISPwiel6w
-e1DjF3C7jHaS1s9PJfWFN982aublL/yLbJP+ou3ifdljS7QzjWZA8NRiMwmBGPIh
-Yq8weR3jIVQl3ndEYxO7Cr/wXXebZwlP6CPZb67rBy0jg+366mxQbDZIwZYEaUME
-zY5izFclr/kKj4s7NTRkC76Yx+rTNP5+BX+JT+rgz5aoQq8ghMw43NYwxjXym/MX
-c8X8g0ECgYEA1crBUAR1gSkM+5mGjjoFLJKrFP+IhUHFh25qGI4Dcxxh1f3M53le
-wF1rkp5SJnHRFm9IW3gM1JoF0PQxI5aXHRGHphwPeKnsQ/xQBRWCeYpqTme9amJV
-tD3aDHkpIhYxkNxqol5gDCAt6tdFSxqPaNfdfsfaAOXiKGrQESUjIBcCgYEAxvmI
-2ROJsBXaiM4Iyg9hUpjZIn8TW2UlH76pojFG6/KBd1NcnW3fu0ZUU790wAu7QbbU
-i7pieeqCqSYcZsmkhnOvbdx54A6NNCR2btc+si6pDOe1jdsGdXISDRHFb9QxjZCj
-6xzWMNvb5n1yUb9w9nfN1PZzATfUsOV+Fy8CbG0CgYEAifkTLwfhqZyLk2huTSWm
-pzB0ltWfDpj22MNqVzR3h3d+sHLeJVjPzIe9396rF8KGdNsWsGlWpnJMZKDjgZsz
-JQBmMc6UMYRARVP1dIKANN4eY0FSHfEebHcqXLho0mXOUTXe37DWfZza5V9Oify3
-JquBd8uUptW1Ue41H4t/ErsCgYEArc5FYtF1QXIlfcDz3oUGz16itUZpgzlb71nd
-1cbTm8EupCwWR5I1j+IEQU+JTUQyI1nwWcnKwZI+5kBbKNJUu/mLsRyY/UXYxEZh
-ibrNklm94373kV1US/0DlZUDcQba7jz9Yp/C3dT/RlwoIw5mP3UxQCizFspNKOSe
-euPeaxUCgYEAntklXwBbokgdDup/u/3ms5Lb/bm22zDOCg2HrlWQCqKEkWkAO6R5
-/Wwyqhp/wTl8VXjxWo+W+DmewGdPHGQQ5fFdqgpuQpGUq24YZS8m66v5ANBwd76t
-IZdtF5HXs2S5CADTwniUS5mX1HO9l5gUkk+h0cH5JnPtsMCnAUM+BRY=
------END RSA PRIVATE KEY-----
-
-ssh bandit26@bandit.labs.overthewire.org -p 2220 -i key26
+scp -P 2220 bandit25@bandit.labs.overthewire.org:~/bandit26.sshkey .
+ssh bandit26@bandit.labs.overthewire.org -p 2220 -i bandit26.sshkey 
 failed
 
 ssh bandit25@bandit.labs.overthewire.org -p 2220 
@@ -302,12 +274,81 @@ cat /etc/passwd | grep bandit26
 cat /usr/bin/showtext
 
 make your terminal smaller to make 'more' not stop immediately
-ssh bandit26@bandit.labs.overthewire.org -p 2220 -i key26
+ssh bandit26@bandit.labs.overthewire.org -p 2220 -i bandit26.sshkey
 v
-:edit /etc/bandit_pass/bandit26
+:set shell=/bin/bash
 
-- level 26
-ssh bandit26@bandit.labs.overthewire.org -p 2220 
-5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+- level 26 -> 27
+:!ls
+:!./bandit26-do cat /etc/bandit_pass/bandit27
 
-- no level 27
+- level 27 -> 28
+ssh bandit27@bandit.labs.overthewire.org -p 2220
+3ba3118a22e93127a4ed485be72ef5ea
+cd /tmp
+mkdir foo
+cd foo
+git clone ssh://bandit27-git@localhost/home/bandit27-git/repo 
+3ba3118a22e93127a4ed485be72ef5ea
+cat repo/README
+
+- level 28 -> 29
+ssh bandit28@bandit.labs.overthewire.org -p 2220
+0ef186ac70e04ea33b4c1853d2526fa2
+cd /tmp
+mkdir foo
+cd foo
+git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+0ef186ac70e04ea33b4c1853d2526fa2
+cd repo
+git log
+git checkout HEAD^
+cat README.md
+
+- level 29 -> 30
+ssh bandit29@bandit.labs.overthewire.org -p 2220
+bbc96594b4e001778eee9975372716b2
+cd /tmp
+mkdir foo
+cd foo
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+bbc96594b4e001778eee9975372716b2
+cd repo
+git log --all --graph
+git checkout 33ce2e95d9c5d6fb0a40e5ee9a2926903646b4e3
+cat README.md
+
+- level 30 -> 31
+ssh bandit30@bandit.labs.overthewire.org -p 2220
+5b90576bedb2cc04c86a9e924ce42faf
+cd /tmp
+mkdir foo
+cd foo
+git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+5b90576bedb2cc04c86a9e924ce42faf
+cd repo
+git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
+
+- level 31 -> 32
+ssh bandit31@bandit.labs.overthewire.org -p 2220
+47e603bb428404d265f59c42920d81e5
+cd /tmp
+mkdir foo
+cd foo
+git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+47e603bb428404d265f59c42920d81e5
+cd repo
+echo May I come in? > key.txt
+git add key.txt -f
+git commit -m foo
+git push
+
+- level 32 -> 33
+ssh bandit32@bandit.labs.overthewire.org -p 2220
+56a9bf19c63d650ce78e6ec0354ee45e
+$0
+cat /etc/bandit_pass/bandit33
+
+- level 33 -> 34
+ssh bandit33@bandit.labs.overthewire.org -p 2220
+c9c3199ddf4121b10cf581a98d51caee
