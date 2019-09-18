@@ -1,0 +1,61 @@
+- level 0 -> 1
+echo -n S1JZUFRPTklTR1JFQVQ= | base64 -d
+
+- level 1 -> 2
+ssh krypton1@krypton.labs.overthewire.org -p 2222
+KRYPTONISGREAT
+cd /krypton/
+cat krypton2 | tr 'A-Z' 'N-ZA-M'
+
+- level 2 -> 3
+ssh krypton2@krypton.labs.overthewire.org -p 2222
+ROTTEN
+cat krypton3 | tr 'A-Z' 'O-ZA-N'
+
+- level 3 -> 4
+ssh krypton3@krypton.labs.overthewire.org -p 2222
+CAESARISEASY
+# https://quipqiup.com/
+cat krypton4 | tr 'BQJUSNCGDZVWMYTXKELAFIOHRP' 'OATSERINHCLDUPMFWGYBKVXQJZ'
+
+- level 4 -> 5
+ssh krypton4@krypton.labs.overthewire.org -p 2222
+BRUTE
+# https://www.dcode.fr/vigenere-cipher
+the key is FREKEY
+
+- level 5 -> 6
+ssh krypton5@krypton.labs.overthewire.org -p 2222
+CLEARTEXT
+# https://www.dcode.fr/vigenere-cipher
+the key is KEYLENGTH
+
+- level 6 -> 7
+ssh krypton6@krypton.labs.overthewire.org -p 2222
+RANDOM
+mkdir /tmp/foo
+cd /tmp/foo
+ln -s /krypton/krypton6/keyfile.dat
+vim input.txt
+100iA<Esc>:wq
+/krypton/krypton6/encrypt6 input.txt output.txt
+cat output.txt
+I write a haskell program to solve it. (solve.hs)
+import Data.Function                                                                              
+import Data.List
+
+input' = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+output' = "EICTDGYIYZKTHNSIRFXYCPFUEOCKRN"
+shifts = zipWith (subtract `on` fromEnum) input' output'
+
+output = "PNUKLYLWRQKGKBE" 
+input :: String
+input = map (toEnum . align) $ zipWith (-) (map fromEnum output) shifts
+    where align n | n < fromEnum 'A' = fromEnum 'Z' - (fromEnum 'A' - n) + 1
+          align n = n
+
+main = putStrLn input
+
+- level 7 -> 8
+ssh krypton7@krypton.labs.overthewire.org -p 2222
+LFSRISNOTRANDOM
